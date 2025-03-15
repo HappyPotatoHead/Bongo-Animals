@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playwrite+HU:wght@100..400&display=swap');
+@import "tailwindcss";
+
+:root {
+    --dark-blue-colour: #1565c0;
+    --light-blue-colour: #42a5f5;
+    --white-colour: #fff;
+    ---brown-colour: #3e2723;
+    --background-colour: #1a1e2d;
+    
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --header-font: 'Playwrite HU', sans-serif;
+    --text-font: 'Lora', sans-serif;
+}
+
+body{
+    background-color: var(--background-colour);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.table-line{
+    stroke: var(---brown-colour);
+}
+
+.shark-mouth{
+    stroke: var(--white-colour);
+}
+
+.body-outer{
+    stroke: var(--dark-blue-colour);
+}
+
+.body-inner{
+    stroke: var(--light-blue-colour);
+}
+
+.right-open, 
+.left-open{
+    stroke: var(--white-colour);
+}
+
+.monitor-outer{
+    stroke: var(--white-colour);
+}
+
+.monitor-screen{
+    stroke: var(--white-colour);
+    fill: var(--background-colour);
+}
+
+#keyboard path{
+    stroke: var(--dark-blue-colour);
+}
+
+#keyboard .keyboard-case{
+    stroke: var(--white-colour);
+}
+
