@@ -12,5 +12,4 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/happypotatohead.github.io/",
 });

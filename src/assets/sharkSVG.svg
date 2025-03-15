@@ -32,9 +32,6 @@
         </clipPath>
     </defs>
 
-    <path className="table-line" d="m236.555 511.005 1490.526 265.263" fill="none" stroke="#000"
-        stroke-width="12" stroke-linecap="round" />
-
     <g id="body" clip-path="url(#d)" stroke-linejoin="round">
         <path className="body-outer"
             d="M1495.883 731.856c-279.278-1053.17-674.833-336.18-770.548-135.673m.157 1.322 771.453 133.643"
@@ -74,6 +71,9 @@
             d="m154.672 94.062 674.423 37.508 186.409 628.26L341.08 628.553Z" clip-path="url(#b)"
             transform="matrix(.60114 0 0 .66034 233.946 146.827)" />
     </g>
+    
+    <path className="table-line" d="m236.555 511.005 1490.526 265.263" fill="none" stroke="#000"
+        stroke-width="12" stroke-linecap="round" />
 
 </svg>
 
