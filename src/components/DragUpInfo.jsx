@@ -41,7 +41,6 @@ const DragUpInfo = ({hasDraggedMenu}) => {
                             This was inspired by <a href = "https://hostrider.com" className={`underline`}>Coding Cat</a>. &nbsp;
                             <a href = "https://uiverse.io/cuzpq/gentle-goat-72" className={`underline`}>Toggle button</a> from by cuzpq.  
                         </p>
-
                 </div>
             </div>
         </>
