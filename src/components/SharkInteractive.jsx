@@ -29,8 +29,6 @@ const SharkInteractive = ({ isToggleOn }) => {
     SHARK_PATHS
   );
 
-  useEyeAnimation(isToggleOn, svgRef, SHARK_PATHS);
-
   useKeyboardControls(isToggleOn, toggleHand);
   useAnime(SHARK_ANIMATION_SETTINGS(["#shark-svg path", "#flipper"]));
   useSharkAnimationControl(
