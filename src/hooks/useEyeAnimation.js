@@ -4,10 +4,6 @@ const useEyeAnimation = (isToggleOn, svgRef, PATHS) => {
   const rightBlinkRef = useRef(null);
   const leftBlinkRef = useRef(null);
 
-
-  // const [rightEyePath, setRightEyePath] = useState(PATHS.EYES.RIGHT.OPEN);
-  // const [leftEyePath, setLeftEyePath] = useState(PATHS.EYES.LEFT.OPEN);
-
   const getRandomBlinkInterval = () => Math.floor(Math.random() * 4000) + 2000;
 
   useEffect(() => {
@@ -18,19 +14,12 @@ const useEyeAnimation = (isToggleOn, svgRef, PATHS) => {
 
     if (!rightEye || !leftEye) return;
 
-    
-    // ✅ Set eyes closed when toggle is OFF
     if (!isToggleOn) {
       rightEye.setAttribute("d", PATHS.EYES.RIGHT.CLOSED);
       leftEye.setAttribute("d", PATHS.EYES.LEFT.CLOSED);
-      return; // Stop execution if toggle is OFF
+      return; 
     }
 
-    // if (!isToggleOn) {
-    //   setRightEyePath(PATHS.EYES.RIGHT.CLOSED);
-    //   setLeftEyePath(PATHS.EYES.LEFT.CLOSED);
-    //   return;
-    // }
     
     rightEye.setAttribute("d", PATHS.EYES.RIGHT.OPEN);
     leftEye.setAttribute("d", PATHS.EYES.LEFT.OPEN);
@@ -72,7 +61,7 @@ const useEyeAnimation = (isToggleOn, svgRef, PATHS) => {
     };
   }, [isToggleOn, svgRef]);
 
-  return { }; // ✅ Now returning values so they can be used in the SVG
+  return { }; 
 };
 
 export default useEyeAnimation;
