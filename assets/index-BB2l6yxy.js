@@ -141,7 +141,7 @@ Error generating stack: `+l.message+`
                     [&_*]:ease-in-out
                     lg:space-y-10
                     xl:space-y-10
-                    `,children:o?G.jsxs(G.Fragment,{children:[G.jsx("h1",{className:"text-6xl font-(family-name:--header-font)",children:o.title}),G.jsx("p",{className:"text-1xl font-(family-name:--text-font)",children:o.description}),o.link&&G.jsx("p",{children:G.jsx("a",{href:o.link,target:"_blank",className:"underline",children:o.link_text})})]}):G.jsx("p",{className:"text-2xl text-white",children:"Select an option to see more details."})})})})},f7=({hasDraggedMenu:u})=>G.jsx(G.Fragment,{children:G.jsx("div",{className:`absolute
+                    `,children:o?G.jsxs(G.Fragment,{children:[G.jsx("h1",{className:"text-3xl lg:text-6xl font-(family-name:--header-font)",children:o.title}),G.jsx("p",{className:"text-1xl font-(family-name:--text-font)",children:o.description}),o.link&&G.jsx("p",{children:G.jsx("a",{href:o.link,target:"_blank",className:"underline",children:o.link_text})})]}):G.jsx("p",{className:"text-2xl text-white",children:"Select an option to see more details."})})})})},f7=({hasDraggedMenu:u})=>G.jsx(G.Fragment,{children:G.jsx("div",{className:`absolute
                 z-40
                 bg-[#6473ad]
                 h-screen
