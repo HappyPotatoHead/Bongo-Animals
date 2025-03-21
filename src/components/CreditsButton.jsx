@@ -9,13 +9,13 @@ const CreditsButton = ({ setDragMenu, hasDraggedMenu, hasDroppedMenu }) => {
     <>
       <div
         className={`
-                px-8 
-                py-4 
-                bottom-0 
-                right-0 
-                absolute 
-                ${hasDroppedMenu ? 'z-40' : 'z-50'}
-                `}
+            px-8 
+            py-4 
+            bottom-0 
+            right-0 
+            absolute 
+            ${hasDroppedMenu ? "z-40" : "z-50"}
+            `}
         onClick={handleClicked}
       >
         <svg
@@ -31,11 +31,7 @@ const CreditsButton = ({ setDragMenu, hasDraggedMenu, hasDroppedMenu }) => {
           strokeLinejoin="round"
           className={`${hasDraggedMenu ? "stroke-black" : "stroke-white"}`}
         >
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
-          />
+          <circle cx="12" cy="12" r="10" />
           <path d="M12 16v-4" />
           <path d="M12 8h.01" />
         </svg>

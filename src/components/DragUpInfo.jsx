@@ -38,6 +38,10 @@ const DragUpInfo = ({hasDraggedMenu}) => {
                         <h1 className={`text-6xl font-(family-name:--header-font)`}>Credits</h1>
 
                         <p className={`font-(family-name:--text-font)`}> 
+                            Removed spirals generation temporarily until I find the best way to generate them.&nbsp; 
+                            Still no sound at the moment.
+                        </p>
+                        <p className={`font-(family-name:--text-font)`}> 
                             This was inspired by <a href = "https://hostrider.com" className={`underline`}>Coding Cat</a>. &nbsp;
                             <a href = "https://uiverse.io/cuzpq/gentle-goat-72" className={`underline`}>Toggle button</a> from by cuzpq.  
                         </p>

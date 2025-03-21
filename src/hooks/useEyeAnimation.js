@@ -19,7 +19,6 @@ const useEyeAnimation = (isToggleOn, svgRef, PATHS) => {
       leftEye.setAttribute("d", PATHS.EYES.LEFT.CLOSED);
       return; 
     }
-
     
     rightEye.setAttribute("d", PATHS.EYES.RIGHT.OPEN);
     leftEye.setAttribute("d", PATHS.EYES.LEFT.OPEN);

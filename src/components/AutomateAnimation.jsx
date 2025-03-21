@@ -1,17 +1,21 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-const Switch = ({setIsToggleOn}) => {
-    const handleToggleChange = (event) => {
-        setIsToggleOn(event.target.checked);
-    };
+const Switch = ({ setIsToggleOn }) => {
+  const handleToggleChange = (event) => {
+    setIsToggleOn(event.target.checked);
+  };
 
-    return (
-        <StyledWrapper className='py-4 px-8 absolute z-30 bottom-0'>
-            <input type="checkbox" className="theme-checkbox" onChange={handleToggleChange} />
-        </StyledWrapper>
-    )
-}
+  return (
+    <StyledWrapper className="py-4 px-8 absolute z-30 bottom-0">
+      <input
+        type="checkbox"
+        className="theme-checkbox"
+        onChange={handleToggleChange}
+      />
+    </StyledWrapper>
+  );
+};
 
 const StyledWrapper = styled.div`
   .theme-checkbox {
@@ -21,7 +25,14 @@ const StyledWrapper = styled.div`
     appearance: none;
     width: 6.25em;
     height: 3.125em;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(50%, #efefef),
+        color-stop(50%, #2a2a2a)
+      )
+      no-repeat;
     background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
     background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
     background-size: 205%;
@@ -42,7 +53,14 @@ const StyledWrapper = styled.div`
     position: absolute;
     top: 0.438em;
     left: 0.438em;
-    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #2a2a2a)) no-repeat;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(50%, #efefef),
+        color-stop(50%, #2a2a2a)
+      )
+      no-repeat;
     background: -o-linear-gradient(left, #efefef 50%, #2a2a2a 50%) no-repeat;
     background: linear-gradient(to right, #efefef 50%, #2a2a2a 50%) no-repeat;
     background-size: 205%;
@@ -60,6 +78,7 @@ const StyledWrapper = styled.div`
 
   .theme-checkbox:checked {
     background-position: 100%;
-  }`;
+  }
+`;
 
 export default Switch;

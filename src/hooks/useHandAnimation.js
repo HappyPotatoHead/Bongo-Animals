@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 
-const useHandAnimation = (isToggleOn, generateSpiral, PATHS) => {
+const useHandAnimation = (
+    isToggleOn, 
+    // generateSpiral, 
+    PATHS) => {
   const [handPath, setHandPath] = useState(PATHS.HAND.LOWERED);
   const toggleCooldown = useRef(false);
   const handIntervalRef = useRef(null);
@@ -12,9 +15,9 @@ const useHandAnimation = (isToggleOn, generateSpiral, PATHS) => {
     setHandPath(PATHS.HAND.RAISED);
     setTimeout(() => setHandPath(PATHS.HAND.LOWERED), 150);
 
-    if (!isToggleOn) {
-      for (let i = 0; i < 3; i++) setTimeout(() => generateSpiral(), i * 200);
-    }
+    // if (!isToggleOn) {
+    //   for (let i = 0; i < 3; i++) setTimeout(() => generateSpiral(), i * 200);
+    // }
 
     setTimeout(() => {
       toggleCooldown.current = false;
@@ -23,8 +26,8 @@ const useHandAnimation = (isToggleOn, generateSpiral, PATHS) => {
 
   useEffect(() => {
     if (!isToggleOn) {
-      setHandPath(PATHS.HAND.LOWERED); 
-      return; 
+      setHandPath(PATHS.HAND.LOWERED);
+      return;
     }
 
     handIntervalRef.current = setInterval(() => {

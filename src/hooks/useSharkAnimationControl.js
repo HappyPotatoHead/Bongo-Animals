@@ -8,30 +8,37 @@ const clearAllAnimations = (animationRef) => {
     }
   });
 
-  animationRef.current.spirals.forEach((anim) => anim.pause());
-  animationRef.current.spirals = [];
+  // animationRef.current.spirals.forEach((anim) => anim.pause());
+  // animationRef.current.spirals = [];
 };
 
-const useSharkAnimationControl = (isToggleOn, animationRef, generateSpiral, clearAllSpirals) => {
+const useSharkAnimationControl = (
+  isToggleOn,
+  animationRef,
+//   generateSpiral,
+//   clearAllSpirals
+) => {
   useEffect(() => {
-    if (!isToggleOn){
+    if (!isToggleOn) {
       clearAllAnimations(animationRef);
-      clearAllSpirals();
+    //   clearAllSpirals();
       return;
     }
 
-    const spiralInterval = setInterval(() => {
-      generateSpiral();
-    }, 400);
+    // const spiralInterval = setInterval(() => {
+    //   generateSpiral();
+    // }, 400);
 
-    animationRef.current.spiralGenerator = spiralInterval;
+    // animationRef.current.spiralGenerator = spiralInterval;
 
     return () => {
       clearAllAnimations(animationRef);
-      clearInterval(spiralInterval);
+    //   clearInterval(spiralInterval);
     };
-    
-  }, [isToggleOn, generateSpiral, clearAllSpirals]);
+  }, [isToggleOn, 
+        // generateSpiral, 
+        // clearAllSpirals
+    ]);
 };
 
 export default useSharkAnimationControl;

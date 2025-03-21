@@ -47,7 +47,7 @@ const useSpiralAnimations = (isToggleOn, svgRef) => {
       });
 
       animationRef.current.spirals.push(animation);
-    }, 50);
+    }, 1000);
   },[svgRef]);
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const useSpiralAnimations = (isToggleOn, svgRef) => {
     if (animationRef.current.spiralGenerator)
       clearInterval(animationRef.current.spiralGenerator);
 
-    const interval = setInterval(() => generateSpiral(), 400);
+    const interval = setInterval(() => generateSpiral(), 4000);
     animationRef.current.spiralGenerator = interval;
 
     return () => clearInterval(interval);

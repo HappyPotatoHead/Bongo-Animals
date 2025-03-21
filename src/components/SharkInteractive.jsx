@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 import SharkSVG from "../assets/sharkSVG.svg";
 
-import { SHARK_PATHS, SHARK_ANIMATION_SETTINGS } from "../config/sharkConfig";
+import { SHARK_PATHS, LOAD_ANIMATION_SETTINGS } from "../config/sharkConfig";
 
 import useSharkAnimationControl from "../hooks/useSharkAnimationControl";
 import useSharkAnimations from "../hooks/useSharkAnimation";
-import useSpiralAnimations from "../hooks/useSpiralAnimation";
+// import useSpiralAnimations from "../hooks/useSpiralAnimation";
 import useKeyboardControls from "../hooks/useKeyboardControls";
 import useEyeAnimation from "../hooks/useEyeAnimation";
 import useHandAnimation from "../hooks/useHandAnimation";
@@ -14,28 +14,24 @@ import useAnime from "../hooks/loadAnimalSVGAnim";
 const SharkInteractive = ({ isToggleOn }) => {
   const svgRef = useRef(null);
   const animationRef = useSharkAnimations(isToggleOn, svgRef);
-  const { spirals, generateSpiral, clearAllSpirals } = useSpiralAnimations(
-    isToggleOn,
-    svgRef
-  );
+  // const { spirals, generateSpiral, clearAllSpirals } = useSpiralAnimations(
+  //   isToggleOn,
+  //   svgRef
+  // );
   const { handPath, toggleHand } = useHandAnimation(
     isToggleOn,
-    generateSpiral,
+    // generateSpiral,
     SHARK_PATHS
   );
-  useEyeAnimation(
-    isToggleOn,
-    svgRef,
-    SHARK_PATHS
-  );
+  useEyeAnimation(isToggleOn, svgRef, SHARK_PATHS);
 
   useKeyboardControls(isToggleOn, toggleHand);
-  useAnime(SHARK_ANIMATION_SETTINGS(["#shark-svg path", "#flipper"]));
+  useAnime(LOAD_ANIMATION_SETTINGS(["#shark-svg path", "#flipper"]));
   useSharkAnimationControl(
     isToggleOn,
     animationRef,
-    generateSpiral,
-    clearAllSpirals
+    // generateSpiral,
+    // clearAllSpirals
   );
 
   return (
@@ -55,7 +51,7 @@ const SharkInteractive = ({ isToggleOn }) => {
             strokeLinecap="round"
             id="flipper"
           />
-          {spirals.map((spiral) => (
+          {/* {spirals.map((spiral) => (
             <g
               key={spiral.id}
               id={`spiral-${spiral.id}`}
@@ -73,7 +69,7 @@ const SharkInteractive = ({ isToggleOn }) => {
                 strokeLinecap="round"
               />
             </g>
-          ))}
+          ))} */}
         </svg>
       </div>
     </>

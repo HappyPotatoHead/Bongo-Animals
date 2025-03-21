@@ -2,8 +2,7 @@ import anime from 'animejs'
 
 export const SHARK_PATHS = {
   HAND: {
-    RAISED:
-      "m 1211.9986,683.75091 c -64.1123,-250.96332 106.2951,-78.89838 106.2951,-78.89838",
+    RAISED:"m 1211.9986,683.75091 c -64.1123,-250.96332 106.2951,-78.89838 106.2951,-78.89838",
     LOWERED: "m 1213,636 c -167,198 122.5,55 122.5,55",
   },
   EYES: {
@@ -20,7 +19,7 @@ export const SHARK_PATHS = {
     "M14 11a2 2 0 1 1-4 0 4 4 0 0 1 8 0 6 6 0 0 1-12 0 8 8 0 0 1 16 0 10 10 0 1 1-20 0 11.93 11.93 0 0 1 2.42-7.22 2 2 0 1 1 3.16 2.44",
 };
 
-export const SHARK_ANIMATION_SETTINGS = (targets) => ({
+export const LOAD_ANIMATION_SETTINGS = (targets) => ({
     targets: targets,  
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: "easeInOutSine",
