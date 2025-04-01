@@ -10,7 +10,7 @@ const DropDownInfo = ({
   const isDog = flags[1];
 
   const content = isShark ? SHORK_CONTENT : isDog ? DOG_CONTENT : null;
-  
+
   return (
     <>
       <div
@@ -25,6 +25,7 @@ const DropDownInfo = ({
                 transition-all
                 duration-300 
                 ease-in-out
+                overflow-y-scroll
                 ${
                   hasDroppedMenu
                     ? "translate-y-0 opacity-100"
@@ -53,16 +54,62 @@ const DropDownInfo = ({
               <h1 className="text-3xl lg:text-6xl font-(family-name:--header-font)">
                 {content.title}
               </h1>
-              <p className="text-1xl font-(family-name:--text-font)">
-                {content.description}
-              </p>
-              {content.link && (
-                <p>
-                  <a href={content.link} target="_blank" className="underline">
-                    {content.link_text}
-                  </a>
-                </p>
-              )}
+              <div className="description">
+                {content.description.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-1xl font-(family-name:--text-font)"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+
+              <h2 className="text-2xl lg:text-4xl font-(family-name:--text-font)">
+                How about a little backstory?
+              </h2>
+
+              <div className="backstory space-y-3 lg:w-1/4">
+                {content.sob_story.map((paragraph, index) => (
+                  <p
+                    key={index}
+                    className="text-1xl font-(family-name:--text-font)"
+                  >
+                    {typeof paragraph === "string" ? paragraph : paragraph}
+                  </p>
+                ))}
+                {content.link_file && (
+                  <p>
+                    <a
+                      href={content.link_file}
+                      target="_blank"
+                      className={`
+                        underline 
+                        hover:no-underline 
+                        `}
+                    >
+                      {content.link_text}
+                    </a>
+                  </p>
+                )}
+              </div>
+
+              <div className={`image_link space-y-5 pb-5`}>
+                {content.link_image && (
+                  <p>
+                    <a
+                      href={content.link_image}
+                      target="_blank"
+                      className={`
+                        underline 
+                        hover:no-underline 
+                        `}
+                    >
+                      {content.image_text}
+                    </a>
+                  </p>
+                )}
+              </div>
             </>
           ) : (
             <p className="text-2xl text-white">

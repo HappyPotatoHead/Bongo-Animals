@@ -24,5 +24,5 @@ export const LOAD_ANIMATION_SETTINGS = (targets) => ({
     strokeDashoffset: [anime.setDashoffset, 0],
     easing: "easeInOutSine",
     duration: 1500,
-    delay: (el, i) => i * 250,
+    delay: (el, i) => i * 50,
 })

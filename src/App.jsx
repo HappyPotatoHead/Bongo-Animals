@@ -51,6 +51,14 @@ const App = () => {
 
             <DropDownInfo hasDroppedMenu={hasDroppedMenu} flags = {flags} />
             <DragUpInfo hasDraggedMenu={hasDraggedMenu} />
+
+            <object
+                className="easter-egg"
+                style={{ display: 'none' }}
+                data="bracelet.svg" 
+                type="image/svg+xml"
+            >
+            </object>
         </>
     );
 };

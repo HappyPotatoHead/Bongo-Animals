@@ -50,7 +50,7 @@ const SlideMenu = ({
                                 `}
             onClick={handleClickedShark}
           >
-            Bittersweet Shark
+            Blue Shark
           </li>
           <li
             className={`
@@ -58,7 +58,7 @@ const SlideMenu = ({
                                 font-(family-name:--header-font)`}
             onClick={handleClickedDog}
           >
-            Unheld Tame Best
+            Brown Dog
           </li>
         </ul>
       </div>
