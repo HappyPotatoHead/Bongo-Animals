@@ -128,6 +128,7 @@ Error generating stack: `+l.message+`
                 transition-all
                 duration-300 
                 ease-in-out
+                overflow-y-scroll
                 ${u?"translate-y-0 opacity-100":"-translate-y-full opacity-0"}`,children:q.jsx("div",{id:"dropdown-wrapper",className:`
                     flex 
                     flex-col
