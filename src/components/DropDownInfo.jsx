@@ -84,8 +84,9 @@ const DropDownInfo = ({
                       href={content.link_file}
                       target="_blank"
                       className={`
-                        underline 
-                        hover:no-underline 
+                        no-underline 
+                        hover:cursor-default
+                        font-(family-name:--text-font)
                         `}
                     >
                       {content.link_text}
