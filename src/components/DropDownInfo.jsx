@@ -65,36 +65,6 @@ const DropDownInfo = ({
                 ))}
               </div>
 
-              {/* <h2 className="text-2xl lg:text-4xl font-(family-name:--text-font)">
-                How about a little backstory?
-              </h2> */}
-
-              {/* <div className="backstory space-y-3 lg:w-1/4">
-                {content.sob_story.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-1xl font-(family-name:--text-font)"
-                  >
-                    {typeof paragraph === "string" ? paragraph : paragraph}
-                  </p>
-                ))}
-                {content.link_file && (
-                  <p>
-                    <a
-                      href={content.link_file}
-                      target="_blank"
-                      className={`
-                        no-underline 
-                        hover:cursor-default
-                        font-(family-name:--text-font)
-                        `}
-                    >
-                      {content.link_text}
-                    </a>
-                  </p>
-                )}
-              </div> */}
-
               <div className={`image_link space-y-5 pb-5`}>
                 {content.link_image && (
                   <p>
