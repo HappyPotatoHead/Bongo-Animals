@@ -18,3 +18,11 @@ export const LOAD_ANIMATION_SETTINGS = (targets) => ({
     duration: 1500,
     delay: (el, i) => i * 50,
 })
+
+export const FILLING_SVG = (targets) => ({
+    targets: targets,
+    fill: ['transparent', '#000000'],
+    easing: "easeInOutSine",
+    duration: 1500,
+    delay: (el, i) => i * 50,
+})

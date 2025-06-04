@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import DogSVG from "../assets/dogSVG.svg";
-import { DOG_PATHS, LOAD_ANIMATION_SETTINGS } from "../config/dogConfig";
+import { DOG_PATHS, LOAD_ANIMATION_SETTINGS, FILLING_SVG} from "../config/dogConfig";
 
 // import underConstruction from "../assets/underConstruction.svg";
 import useAnime from "../hooks/loadAnimalSVGAnim";
@@ -22,7 +22,7 @@ const DogInteractive = ({ isToggleOn }) => {
   useKeyboardControls(isToggleOn, toggleHand);
 
   useAnime(LOAD_ANIMATION_SETTINGS(["#dog-svg path", "ellipse", "#left-paw", "#right-paw"]));
-
+  useAnime(FILLING_SVG(['ellipse']))
   useSharkAnimationControl(
     isToggleOn,
     animationRef,
