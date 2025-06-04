@@ -16,8 +16,8 @@ const App = () => {
     const [hasDroppedMenu, setDropMenu] = useState(false);
     const [hasDraggedMenu, setDragMenu] = useState(false);
     const [hasSlideMenu, setSlideMenu] = useState(false);
-    const [isShark, setShark] = useState(false);
-    const [isDog, setDog] = useState(true);
+    const [isShark, setShark] = useState(true);
+    const [isDog, setDog] = useState(false);
     const flags = [isShark, isDog];
     const setFlags = (newFlags) => {
         setShark(newFlags[0]);
