@@ -6,8 +6,9 @@
     --dark-blue-colour: #1565c0;
     --light-blue-colour: #42a5f5;
     --white-colour: #fff;
-    ---brown-colour: #3e2723;
+    --brown-colour: #3e2723;
     --background-colour: #1a1e2d;
+    --lighter-background-colour: #BCB88A;
     
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -27,7 +28,7 @@ body{
 }
 
 .table-line{
-    stroke: var(---brown-colour);
+    stroke: var(--brown-colour);
 }
 
 .shark-mouth{

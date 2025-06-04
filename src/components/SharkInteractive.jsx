@@ -18,10 +18,11 @@ const SharkInteractive = ({ isToggleOn }) => {
   //   isToggleOn,
   //   svgRef
   // );
-  const { handPath, toggleHand } = useHandAnimation(
+  const { sharkHandPath, toggleHand } = useHandAnimation(
     isToggleOn,
     // generateSpiral,
-    SHARK_PATHS
+    SHARK_PATHS,
+    "shark"
   );
   useEyeAnimation(isToggleOn, svgRef, SHARK_PATHS);
 
@@ -44,7 +45,7 @@ const SharkInteractive = ({ isToggleOn }) => {
           <SharkSVG />
 
           <path
-            d={handPath}
+            d={sharkHandPath}
             stroke="var(--light-blue-colour)"
             fill="var(--background-colour)"
             strokeWidth="8"

@@ -1,29 +1,63 @@
-import React from "react";
+import React, { useRef } from "react";
+import DogSVG from "../assets/dogSVG.svg";
+import { DOG_PATHS, LOAD_ANIMATION_SETTINGS } from "../config/dogConfig";
+
 // import underConstruction from "../assets/underConstruction.svg";
 import useAnime from "../hooks/loadAnimalSVGAnim";
-import { LOAD_ANIMATION_SETTINGS } from "../config/sharkConfig";
+import useSharkAnimations from "../hooks/useSharkAnimation";
+import useHandAnimation from "../hooks/useHandAnimation";
+import useKeyboardControls from "../hooks/useKeyboardControls";
+import useSharkAnimationControl from "../hooks/useSharkAnimationControl";
 
-const DogInteractive = () => {
-  useAnime(LOAD_ANIMATION_SETTINGS(["#under-construction path"]));
+const DogInteractive = ({ isToggleOn }) => {
+  const svgRef = useRef(null);
+  const animationRef = useSharkAnimations(isToggleOn, svgRef);
+
+  const { leftPawPath, rightPawPath, toggleHand } = useHandAnimation(
+    isToggleOn,
+    DOG_PATHS,
+    "dog"
+  );
+
+  useKeyboardControls(isToggleOn, toggleHand);
+
+  useAnime(LOAD_ANIMATION_SETTINGS(["#dog-svg path", "ellipse", "#left-paw", "#right-paw"]));
+
+  useSharkAnimationControl(
+    isToggleOn,
+    animationRef,
+  );
+
+
+  console.log(leftPawPath);
+  console.log(rightPawPath);
+
   return (
     <>
-      <div className={`flex justify-center items-center w-screen h-screen`}>
+      <div 
+        onClick={!isToggleOn ? toggleHand : undefined}
+        className={`flex justify-center items-center w-screen h-screen`}>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="256"
-          height="256"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          color="orange"
-          id="under-construction"
+          ref = {svgRef} viewBox = "0 500 3000 4000"
+          width="100%"
+          height="100%"
         >
-          <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" />
-          <path d="M12 9v4" />
-          <path d="M12 17h.01" />
+          <DogSVG/>
+          <path 
+          d = {leftPawPath}
+          stroke = "#5a4832"
+          fill = "none"
+          strokeWidth="20"
+          strokeLinecap="round"
+          id = "left-paw"/>
+
+          <path 
+          d = {rightPawPath}
+          stroke = "#5a4832"
+          fill = "none"
+          strokeWidth="20"
+          strokeLinecap="round"
+          id = "right-paw"/>
         </svg>
       </div>
     </>

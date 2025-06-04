@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SharkInteractive from "./components/SharkInteractive";
 import DogInteractive from "./components/DogInteractive";
 import AutomateAnimation from "./components/AutomateAnimation";
@@ -16,13 +16,19 @@ const App = () => {
     const [hasDroppedMenu, setDropMenu] = useState(false);
     const [hasDraggedMenu, setDragMenu] = useState(false);
     const [hasSlideMenu, setSlideMenu] = useState(false);
-    const [isShark, setShark] = useState(true);
-    const [isDog, setDog] = useState(false);
+    const [isShark, setShark] = useState(false);
+    const [isDog, setDog] = useState(true);
     const flags = [isShark, isDog];
     const setFlags = (newFlags) => {
         setShark(newFlags[0]);
         setDog(newFlags[1]);
     };
+    useEffect(() => {
+        document.body.style.backgroundColor = isDog 
+            ? "var(--lighter-background-colour)" 
+            : "var(--background-colour)";
+    }, [isDog]);
+
     return (
         <>
             <UmbrellaButton

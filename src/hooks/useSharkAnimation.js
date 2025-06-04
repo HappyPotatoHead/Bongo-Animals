@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 
+// This was suppose to be something, but I forgo
+
 const useSharkAnimations = (isToggleOn, svgRef) => {
     const animationRef = useRef({ 
       // spirals: [], 
