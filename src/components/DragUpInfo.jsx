@@ -37,13 +37,15 @@ const DragUpInfo = ({hasDraggedMenu}) => {
                     `}>
                         <h1 className={`text-6xl font-(family-name:--header-font)`}>Credits</h1>
                         <div className="description">
-                            <p>This is a form of externalisation.</p>
+                            <p className={`font-(family-name:--text-font)`}>This is a form of externalisation.</p>
                         </div>
                         <div className="Inspiration">
-                            <p className={`font-(family-name:--text-font)`}> 
-                                This was inspired by <a href = "https://hostrider.com" className={`underline`}>Coding Cat</a>. &nbsp;
-                                <a href = "https://uiverse.io/cuzpq/gentle-goat-72" className={`underline`}>Toggle button</a> from by cuzpq.  
-                            </p>
+                            <ul className={'font-(family-name:--text-font)'}>
+                                <li>Inspired by <a href="https://hostrider.com" className="underline">Coding Cat</a></li>
+                                <li>Toggle button from <a href="https://uiverse.io/cuzpq/gentle-goat-72" className="underline">cuzpq</a></li>
+                                <li>Icons from <a href="https://lucide.dev/" className="underline">Lucide.dev</a></li>
+                                <li>SVGs drawn with <a href="https://inkscape.org/" className="underline">Inkscape</a></li>
+                            </ul>
                         </div>
                 </div>
             </div>
